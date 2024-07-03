@@ -1,0 +1,196 @@
+
+body {
+    font-family: 'Poppins', Helvetica, Arial, sans-serif;
+    background-image: url(https://themes.muffingroup.com/be/farm2/wp-content/uploads/2020/12/farm2-bg.png);
+    background-repeat: repeat;
+    background-position: center top;
+}
+
+.hero {
+    background-image: url('../../images/ImagenesProductos/campo.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    text-align: center;
+    color: white;
+    padding: 100px 0;
+}
+
+.hero h2 {
+    font-family: "Volkhov", Helvetica, Arial, sans-serif;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.valores {
+    background-color: #2E473B;
+    color: white;
+    padding: 80px 20px 20px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    height: 350px;
+    margin-bottom: 40px;
+}
+
+.valor {
+    flex: 1;
+    margin: 0 30px;
+    min-width: 250px;
+}
+
+.icono {
+    font-size: 70px;
+    margin-bottom: 30px;
+    color: white; 
+}
+
+.valor h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.valor p {
+    font-size: 16px;
+    color: #cbd8cf;
+}
+
+.contenedorProductos {
+    
+    padding: 50px;
+    margin: 100px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.producto_hijo {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    gap: 20px;
+}
+
+.producto_hijo:nth-child(even) {
+    flex-direction: row-reverse; 
+}
+
+.contenedor_img{
+   width: 50%;
+}
+
+.imagen {
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 90px;
+}
+
+.texto_contenido {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.titulo {
+    font-family: "Volkhov", Helvetica, Arial, sans-serif;
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+
+.descripcion {
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.precio {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #74A563;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 120px;
+    height: 50px;
+}
+
+button:hover {
+    background-color: #84bb72;
+}
+
+
+@media (max-width: 768px) {
+
+    .contenedorProductos {
+        padding: 30px;
+        margin: 20px;
+        text-align: center;
+        align-content: center;
+    }
+
+    .producto_hijo {
+        flex-direction: column;
+    }
+
+    .producto_hijo:nth-child(odd) {
+        flex-direction: column; 
+    }
+
+    .producto_hijo:nth-child(even) {
+        flex-direction: column; 
+    }
+
+    .valores {
+        flex-direction: column;
+        align-items: center;
+        height: 800px;
+    }
+
+    .valor {
+        margin-bottom: 20px;
+    }
+    
+    .imagen {
+        align-self: center;
+        margin: 0px;
+    }
+
+button {
+    align-self: center;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .producto_hijo {
+        padding: 15px;
+    }
+
+    .imagen {
+        height: 100px;
+        width: 100px;
+        margin: 0px; 
+    }
+
+    .titulo {
+        font-size: 20px;
+    }
+
+    .precio {
+        font-size: 16px;
+    }
+
+    .descripcion {
+        font-size: 14px;
+    }
+
+}
