@@ -1,13 +1,27 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const email = document.getElementById('email');
-    const telefono = document.getElementById('telefono');
-    const localidad = document.getElementById('localidad');
-    const submitBtn = document.getElementById('submit-btn');
+  const nombre = document.getElementById('nombre').value.trim();
+  const apellido = document.getElementById('apellido').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const telefono = document.getElementById('telefono').value.trim();
+  const localidad = document.getElementById('localidad').value.trim();
+  const barrio = document.getElementById('barrio').value.trim();
+  const direccion = document.getElementById('direccion').value.trim();
+  const submitBtn = document.getElementById('submit-btn');
 
     submitBtn.addEventListener('click', function(event) {
         event.preventDefault();
 
-        if (!validarEmail(email.value)) {
+        if (nombre === '' || apellido === '' || email === '' || telefono === '' || localidad === '' || barrio === '' || direccion === '' || metodoPago === '') {
+            Swal.fire({
+                icon: 'error',
+                title: '¡Atención!',
+                text: 'Todos los campos del formulario son requeridos.'
+            });
+            return; 
+          }
+        
+        
+        if (!validarEmail(email)) {
             Swal.fire({
                 icon: 'error',
                 title: 'Correo no válido',
@@ -16,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        if (!validarTelefono(telefono.value)) {
+        if (!validarTelefono(telefono)) {
             Swal.fire({
                 icon: 'error',
                 title: 'Teléfono no válido',
@@ -25,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        if (!validarLocalidad(localidad.value)) {
+        if (!validarLocalidad(localidad)) {
             Swal.fire({
                 icon: 'error',
                 title: 'Localidad no válida',
